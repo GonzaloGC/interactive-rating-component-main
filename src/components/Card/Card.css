@@ -16,13 +16,13 @@
 .title-card {
   text-align: left;
   font-size: 21px;
-  line-height: 10px;
+  /* line-height: 10px; */
 }
 
 .p-card {
   font-size: 14px;
   text-align: left;
-  line-height: 20px;
+  /* line-height: 20px; */
   color: hsl(217, 12%, 63%);
 }
 
@@ -33,4 +33,31 @@
   justify-content: space-between;
   padding: 26px;
   box-sizing: border-box;
+}
+
+@media (width >= 768px){
+  .container-card{
+    width: 414px;
+    height: 418px;
+  }
+  .container-circle-number{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .title-card {
+    font-size: 30px;
+  }
+  
+  .p-card {
+    font-size: 16px;
+    line-height: 23px;
+    color: hsl(217, 12%, 63%);
+    font-weight: 400;
+    margin-bottom: 0px;
+  }
+  
+  .divTest{
+    padding: 30px;
+  }
 }

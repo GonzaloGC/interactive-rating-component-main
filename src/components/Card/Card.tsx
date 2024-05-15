@@ -8,10 +8,12 @@ export const Card = () => {
     <section className="container-card">
       <div className="divTest">
         <CircleStar />
-        <div className="title-card">How did we do?</div>
-        <div className="p-card">
+        <div className="container-t-p">
+          <span className="title-card">How did we do?</span>
+          <p className="p-card">
           Please let us Know how we did with your support request. All feedback
           is appreciated to help us improve our offerinq!
+          </p>
         </div>
         <div className="container-circle-number">
           <CircleNumber number="1" />

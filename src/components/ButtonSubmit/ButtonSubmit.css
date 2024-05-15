@@ -8,3 +8,15 @@
   letter-spacing: 3px;
   cursor: pointer;
 }
+
+@media (width >= 768px) {
+  .btn-submit{
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .btn-submit:hover{
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(25, 97%, 53%);
+  }
+}
