@@ -5,4 +5,6 @@
   border-radius: 25px;
   width: 278px;
   height: 45px;
+  letter-spacing: 3px;
+  cursor: pointer;
 }
