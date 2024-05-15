@@ -1,0 +1,8 @@
+.btn-submit{
+  background-color: hsl(25, 97%, 53%);
+  border: none;
+  text-transform: uppercase;
+  border-radius: 25px;
+  width: 278px;
+  height: 45px;
+}

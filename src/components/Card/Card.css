@@ -1,0 +1,25 @@
+.container-card {
+  border: 2px solid white;
+  background-image: linear-gradient(to bottom, #212832, #171e28);
+  width: 327px;
+  height: 360px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.container-circle-number{
+  display: flex;
+  justify-content: space-around;
+}
+
+.p-card {
+  text-align: left;
+}
+
+.title-card {
+  text-align: right;
+}

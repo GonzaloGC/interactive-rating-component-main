@@ -1,0 +1,15 @@
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #272e38;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  align-self: flex-start;
+}
+
+.iconStar {
+  width: 15px;
+  height: 15px;
+}
