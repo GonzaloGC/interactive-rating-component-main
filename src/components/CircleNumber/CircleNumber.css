@@ -10,6 +10,15 @@
   font-size: 15px;
   cursor: pointer;
 }
+.circle-number:hover{
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+}
+
+.circle-number.stateTouch{
+  background-color: hsl(216, 12%, 54%);
+  color: hsl(0, 0%, 100%);
+}
 
 @media (width >= 768px) {
   .circle-number {
@@ -18,8 +27,4 @@
     font-size: 18px;
   }
 
-  .circle-number:hover{
-    background-color: hsl(25, 97%, 53%);
-    color: hsl(0, 0%, 100%);
-  }
 }
