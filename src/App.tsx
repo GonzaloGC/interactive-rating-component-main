@@ -1,30 +1,24 @@
 import { useState } from 'react';
 import './App.css';
 import { Card } from './components/Card/Card';
-import { CardThankYou } from './components/CardThankYou/CardThankYou';
 import { ButtonSubmit } from './components/ButtonSubmit/ButtonSubmit';
+import { CardThankYou } from './components/CardThankYou/CardThankYou';
 
 function App() {
 
+  const [condition, setCondition] = useState('<Card />');
+  
+  const ele = condition == '<Card />' ? <Card />:<CardThankYou selectMessage='You selected 4 out ot 5'/>
 
-  const [click, setClick] = useState(false);
-
-  const handleClick = () => {
-    // Cambiar el estado al valor opuesto
-    setClick(!click);
+  const handleChange = () => {
+    setCondition(!condition)
   }
 
-  let content;
-  if ({oncl}) {
-    content = <Card />;
-  } else {
-    content = <CardThankYou/>;
-  }
 
   return (
     <>
-      
-      {content}
+      {ele}
+      <ButtonSubmit nameButton='press' handleClick={handleChange}/>
     </>
   )
 }
