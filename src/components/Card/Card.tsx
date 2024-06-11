@@ -1,14 +1,26 @@
 import "./Card.css";
-import { CircleStar } from "../CircleStar/CircleStar";
-import { CircleNumber } from "../CircleNumber/CircleNumber";
-import { ButtonSubmit } from "../ButtonSubmit/ButtonSubmit";
+import { useState } from "react";
 
 export const Card = () => {
+
+  const[change, setChange] = useState(false)
+
+  const handleClick = ()=>{
+    setChange(!change)
+  }
+
+  const num = [1, 2, 3, 4, 5]
 
   return (
     <section className="container-card">
       <div className="divTest">
-        <CircleStar />
+        <div className="circle">
+          <img
+            className="iconStar"
+            src="src/assets/images/icon-star.svg"
+            alt="icon star"
+          />
+        </div>
         <div className="container-t-p">
           <span className="title-card">How did we do?</span>
           <p className="p-card">
@@ -16,14 +28,12 @@ export const Card = () => {
             feedback is appreciated to help us improve our offerinq!
           </p>
         </div>
-        <div className="container-circle-number">
-          <CircleNumber num="1"/>
-          <CircleNumber num="2" />
-          <CircleNumber num="3" />
-          <CircleNumber num="4" />
-          <CircleNumber num="5" />
+        <div className="container-button-circle-number">
+          {num.map(dataNum => <button className="button-circle-number">
+            <span className="circle-number">{dataNum}</span>
+          </button>)}
         </div>
-        <ButtonSubmit nameButton="Submit" />
+        <button onClick={handleClick} className="btn-submit">Submit</button>
       </div>
     </section>
   );

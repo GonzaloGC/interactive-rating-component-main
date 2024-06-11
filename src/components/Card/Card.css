@@ -7,10 +7,33 @@
   justify-content: center;
   align-items: center;
 }
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #272e38;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  align-self: flex-start;
+  /* margin: 24px; */
+}
 
-.container-circle-number{
+.iconStar {
+  width: 15px;
+  height: 15px;
+}
+
+.container-button-circle-number {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+}
+.button-circle-number {
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
 }
 
 .title-card {
@@ -26,7 +49,7 @@
   color: hsl(217, 12%, 63%);
 }
 
-.divTest{
+.divTest {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -34,21 +57,56 @@
   padding: 26px;
   box-sizing: border-box;
 }
+.circle-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #272e38;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: hsl(217, 12%, 63%);
+  font-size: 15px;
+  cursor: pointer;
+}
+.circle-number:hover {
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+}
 
-@media (width >= 768px){
-  .container-card{
+.circle-number.stateTouch {
+  background-color: hsl(216, 12%, 54%);
+  color: hsl(0, 0%, 100%);
+}
+.btn-submit {
+  background-color: hsl(25, 97%, 53%);
+  border: none;
+  text-transform: uppercase;
+  border-radius: 25px;
+  width: 278px;
+  height: 45px;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+.btn-submit:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
+}
+
+@media (width >= 768px) {
+  .container-card {
     width: 414px;
     height: 418px;
   }
-  .container-circle-number{
+  .container-button-circle-number {
     display: flex;
     justify-content: space-between;
   }
-  
+
   .title-card {
     font-size: 30px;
   }
-  
+
   .p-card {
     font-size: 16px;
     line-height: 23px;
@@ -56,8 +114,28 @@
     font-weight: 400;
     margin-bottom: 0px;
   }
-  
-  .divTest{
+
+  .divTest {
     padding: 30px;
+  }
+
+  .circle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .iconStar {
+    width: 20px;
+    height: 20px;
+  }
+
+  .btn-submit {
+    width: 100%;
+    font-size: 15px;
+  }
+  .circle-number {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
   }
 }
