@@ -7,6 +7,9 @@
   justify-content: center;
   align-items: center;
 }
+.container-card-thank-you-out{
+  /* display: none; */
+}
 
 .container-info-card{
   height: 100%;
@@ -31,9 +34,13 @@
   gap: 14px;
 }
 .messageSelected{
-  background-color: #212832;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #262f38;
   border-radius: 25px;
-  padding: 7px 10px;
+  height: 31px;
+  width: 192px;
 }
 
 .text-messageSelected{

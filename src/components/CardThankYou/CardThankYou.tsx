@@ -2,7 +2,7 @@ import "./CardThankYou.css";
 
 export function CardThankYou({ selectMessage }: { selectMessage: string }) {
   return (
-    <section className="container-card-thank-you">
+    <section className="container-card-thank-you container-card-thank-you-out">
       <div className="container-info-card">
         <img
           className="imgThank"
@@ -10,7 +10,7 @@ export function CardThankYou({ selectMessage }: { selectMessage: string }) {
           alt="image thank you"
         />
         <div className="messageSelected">
-          <span className="text-messageSelected">{selectMessage}</span>
+          <span className="text-messageSelected">Your selected {selectMessage} out of 5</span>
         </div>
         <div className="title-paragr">
           <h2 className="titleThank">Thank you!</h2>
