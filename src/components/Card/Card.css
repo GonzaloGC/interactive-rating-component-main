@@ -53,9 +53,18 @@
   color: hsl(217, 12%, 63%);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+.button-circle-number:active,
+.button-circle-number:focus{
+  border-radius: 50%;
+  background-color: #7c8798;
+  outline: none;
+  box-shadow: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+} 
+
 .button-circle-number:hover {
-  background-color: hsl(25, 97%, 53%);
-  color: hsl(0, 0%, 100%);
+  background-color: #272e38;
+  color: hsl(217, 12%, 63%);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 .button-circle-number-selected {
@@ -70,6 +79,15 @@
   font-size: 15px;
   cursor: pointer;
 }
+.button-circle-number-selected:active,
+.button-circle-number-selected:focus{
+  border-radius: 50%;
+  background-color: #7c8798;
+  outline: none;
+  box-shadow: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+} 
+
 .title-card {
   text-align: left;
   font-size: 24px;
@@ -102,6 +120,19 @@
   cursor: pointer;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
+.btn-submit:active,
+.btn-submit:focus {
+  background-color: hsl(25, 97%, 53%);
+  border-radius: 25px;
+  /* width: 278px;
+  height: 45px; */
+  /*letter-spacing: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; */
+  outline: none;
+  box-shadow: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 .btn-submit:hover {
   background-color: hsl(0, 0%, 100%);
   color: hsl(25, 97%, 53%);
@@ -129,6 +160,11 @@
     width: 51px;
     height: 51px;
     font-size: 17px;
+  }
+  .button-circle-number:hover {
+    background-color: hsl(25, 97%, 53%);
+    color: hsl(0, 0%, 100%);
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   .button-circle-number-selected{
     width: 51px;
