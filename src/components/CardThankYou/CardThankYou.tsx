@@ -1,6 +1,13 @@
 import "./CardThankYou.css";
 
-export function CardThankYou({ selectMessage }: { selectMessage: string }) {
+type cardThankYouProps = {
+  selectMessage: number
+}
+
+export function CardThankYou(props: cardThankYouProps) {
+
+  const{selectMessage} = props;
+
   return (
     <section className="container-card-thank-you container-card-thank-you-out">
       <div className="container-info-card">
