@@ -7,10 +7,6 @@
   justify-content: center;
   align-items: center;
 }
-.container-card-thank-you-out{
-  /* display: none; */
-}
-
 .container-info-card{
   height: 100%;
   display: flex;
@@ -20,12 +16,10 @@
   padding: 27px;
   box-sizing: border-box;
 }
-
 .imgThank{
   max-width: 50%;
   height: auto;
 }
-
 .title-paragr{
   display: flex;
   flex-direction: column;
@@ -42,17 +36,16 @@
   height: 31px;
   width: 170px;
 }
-
 .text-messageSelected{
   font-size: 14px;
   color: hsl(25, 97%, 53%);
+  font-weight: 300;
 }
-
 .titleThank{
   margin: 0;
   text-align: center;
+  font-weight: 500;
 }
-
 .paragraphThank{
   margin: 0;
   text-align: center;
