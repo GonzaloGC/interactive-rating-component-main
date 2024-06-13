@@ -4,11 +4,20 @@
   height: 360px;
   border-radius: 15px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 26px 26px 30px 26px;
+  box-sizing: border-box;
 }
-.container-card-out{
+.container-card-out {
   display: none;
+}
+.container-circle-title-p{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 27px;
 }
 .circle {
   display: flex;
@@ -19,120 +28,75 @@
   height: 40px;
   border-radius: 50%;
   align-self: flex-start;
-  /* margin: 24px; */
+  /* padding-bottom: 26px; */
 }
-
 .iconStar {
   width: 15px;
   height: 15px;
 }
-
 .container-button-circle-number {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 .button-circle-number {
-  /* border: none;
-  background-color: transparent;
-  margin: 0;
-  padding: 0; */
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #272e38;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  /* color: hsl(217, 12%, 63%); */
+  width: 41px;
+  height: 41px;
   font-size: 15px;
   cursor: pointer;
+  color: hsl(217, 12%, 63%);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 .button-circle-number:hover {
   background-color: hsl(25, 97%, 53%);
   color: hsl(0, 0%, 100%);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-
-/* .num11{
-  background-color: #272e38;
-  color: hsl(0, 0%, 100%);
-} */
-.sel{
+.button-circle-number-selected {
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #272e38;
+  background-color: #7c8798;
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  /* color: hsl(217, 12%, 63%); */
   font-size: 15px;
   cursor: pointer;
 }
-
-
-.num1 {
-  background-color: #7c8798;
-  color: hsl(0, 0%, 100%);
-}
-.num11 {
-  background-color: #7c8798;
-  color: hsl(0, 0%, 100%);
-}
-.num12 {
-  background-color: #7c8798;
-  color: hsl(0, 0%, 100%);
-}
-.num2 {
-  background-color: #7c8798;
-  color: hsl(0, 0%, 100%);
-}
-.num3 {
-  background-color: #7c8798;
-  color: hsl(0, 0%, 100%);
-}
-.num4 {
-  background-color: #7c8798;
-  color: hsl(0, 0%, 100%);
-}
-.num5 {
-  background-color: #7c8798;
-  color: hsl(0, 0%, 100%);
-}
-
-
 .title-card {
   text-align: left;
-  font-size: 21px;
-  /* line-height: 10px; */
+  font-size: 24px;
+  letter-spacing: 0.4px;
 }
-
 .p-card {
   font-size: 14px;
   text-align: left;
-  /* line-height: 20px; */
   color: hsl(217, 12%, 63%);
   margin-bottom: 0;
-  line-height: 20px;
+  margin-top: 11px;
+  line-height: 22px;
 }
-
+container-title&p{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 .divTest {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 26px;
+  
   box-sizing: border-box;
 }
-.circle-number {
-  
-}
-
-
-
 
 .btn-submit {
   background-color: hsl(25, 97%, 53%);
@@ -143,48 +107,61 @@
   height: 45px;
   letter-spacing: 3px;
   cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 .btn-submit:hover {
   background-color: hsl(0, 0%, 100%);
   color: hsl(25, 97%, 53%);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
-
 @media (width >= 768px) {
   .container-card {
     width: 414px;
-    height: 418px;
+    height: 416px;
+    border-radius: 28px;
+    padding: 32px 38px 31px 33px;
+  }
+  .container-circle-title-p{
+    gap: 31px;
+    padding-bottom: 25px;
   }
   .container-button-circle-number {
     display: flex;
     justify-content: space-between;
   }
-
   .title-card {
-    font-size: 30px;
+    font-size: 28px;
   }
-
+  .button-circle-number{
+    width: 51px;
+    height: 51px;
+  }
+  .button-circle-number-selected{
+    width: 51px;
+    height: 51px;
+  }
   .p-card {
-    font-size: 16px;
-    line-height: 23px;
+    font-size: 15px;
+    line-height: 24px;
     color: hsl(217, 12%, 63%);
     font-weight: 400;
     margin-bottom: 0px;
   }
-
   .divTest {
-    padding: 30px;
+    width: 100%;
+    /* padding-top: 1px; */
   }
-
+  .btn-submit{
+    width: 335px;
+  }
   .circle {
-    width: 50px;
-    height: 50px;
+    width: 49px;
+    height: 49px;
   }
-
   .iconStar {
-    width: 20px;
-    height: 20px;
+    width: 17px;
+    height: 17px;
   }
-
   .btn-submit {
     width: 100%;
     font-size: 15px;

@@ -1,63 +1,88 @@
 import "./Card.css";
 import { useState } from "react";
 import { CardThankYou } from "../CardThankYou/CardThankYou";
-
-// type cardProps = {
-//   handleClick: ()=> void
-// }
+import classNames from "classnames";
 
 export const Card = () => {
-  // const{handleClick} = props
   const [selectedNumber, setSelectedNumber] = useState(null);
   const [renderedNumber, setRenderedNumber] = useState(null);
   const [change, setChange] = useState(false);
-  const [style1, setStyle1] = useState(false);
+  const [isOptionSelected, setIsOptionSelected] = useState(false);
+  const [buttonText, setButtonText] = useState("Submit");
+  const [buttonColor, setButtonColor] = useState("button-circle-number");
+  const [buttonColor2, setButtonColor2] = useState("button-circle-number");
+  const [buttonColor3, setButtonColor3] = useState("button-circle-number");
+  const [buttonColor4, setButtonColor4] = useState("button-circle-number");
+  const [buttonColor5, setButtonColor5] = useState("button-circle-number");
 
-  const handleSelect = (number) => {
+  const handleSelect = (number: null) => {
     setSelectedNumber(number);
   };
-  const handleStyle1 = () => {
-    setStyle1(!style1);
-  };
+  const handleSelectStyle = () => {
+    setIsOptionSelected(true);
+    if (event && event.target) {
+      const textContent = event.target.textContent;
+      // const textContent = (event.target as HTMLInputElement).textContent;
+      handleSelect(textContent);
+      const styleCircle = textContent;
+      const styleCircle2 = textContent;
+      const styleCircle3 = textContent;
+      const styleCircle4 = textContent;
+      const styleCircle5 = textContent;
 
-  const handleSelectStyle = (Number) => {
-    console.log(`Botón cliqueado: ${event.target.textContent}`)
-    handleStyle1();
-    handleSelect(Number);
+      const styleBgCircle = classNames({
+        "button-circle-number-selected": styleCircle === "1",
+        "button-circle-number": styleCircle !== "1",
+      });
+      setButtonColor(styleBgCircle);
+
+      const styleBgCircle2 = classNames({
+        "button-circle-number-selected": styleCircle2 === "2",
+        "button-circle-number": styleCircle2 !== "2",
+      });
+      setButtonColor2(styleBgCircle2);
+
+      const styleBgCircle3 = classNames({
+        "button-circle-number-selected": styleCircle3 === "3",
+        "button-circle-number": styleCircle3 !== "3",
+      });
+      setButtonColor3(styleBgCircle3);
+
+      setButtonColor(styleBgCircle);
+      const styleBgCircle4 = classNames({
+        "button-circle-number-selected": styleCircle4 === "4",
+        "button-circle-number": styleCircle4 !== "4",
+      });
+      setButtonColor4(styleBgCircle4);
+
+      const styleBgCircle5 = classNames({
+        "button-circle-number-selected": styleCircle5 === "5",
+        "button-circle-number": styleCircle5 !== "5",
+      });
+      setButtonColor5(styleBgCircle5);
+    } else {
+      console.error("Error: event or event.target not defined");
+    }
   };
 
   const handleSubmit = () => {
     setRenderedNumber(selectedNumber);
   };
+
   const handleClick = () => {
-    setChange(!change);
+    if (isOptionSelected) {
+      setChange(!change);
+    } else {
+      alert("Please select an option first");
+    }
   };
 
-  const handleButtonClick = (e) => {
-    console.log(`${e.target.textContent}`)
+  const handleButtonClick = (event) => {
+    const buttonText = event.target.textContent;
+    setButtonText(buttonText);
     handleSubmit();
     handleClick();
   };
- 
-  // const hund =(e)=>{
-
-  // }
-
-  const styleSelect1 = style1
-    ? "button-circle-number num3"
-    : "button-circle-number";
-  const styleSelect2 = style1
-    ? "button-circle-number num3"
-    : "button-circle-number";
-  const styleSelect3 = style1
-    ? "button-circle-number num3"
-    : "button-circle-number";
-  const styleSelect4 = style1
-    ? "button-circle-number num4"
-    : "button-circle-number";
-  const styleSelect5 = style1
-    ? "button-circle-number num5"
-    : "button-circle-number";
 
   const submitCard = change
     ? "container-card container-card-out"
@@ -66,7 +91,7 @@ export const Card = () => {
   return (
     <>
       <section className={submitCard}>
-        <div className="divTest">
+        <div className="container-circle-title-p">
           <div className="circle">
             <img
               className="iconStar"
@@ -81,44 +106,39 @@ export const Card = () => {
               feedback is appreciated to help us improve our offerinq!
             </p>
           </div>
+        </div>
+        <div className="divTest">
           <div className="container-button-circle-number">
-            <button
-              onClick={() => handleSelectStyle(1)}
-              className={`sel ${styleSelect1}`}
-            >
+            <button onClick={() => handleSelectStyle()} className={buttonColor}>
               1
             </button>
             <button
-              onClick={() => handleSelectStyle(2)}
-              className={`sel ${styleSelect2}`}
+              className={buttonColor2}
+              onClick={() => handleSelectStyle()}
             >
               2
             </button>
             <button
-              onClick={() => handleSelectStyle(3)}
-              className={`sel ${styleSelect3} `}
+              onClick={() => handleSelectStyle()}
+              className={buttonColor3}
             >
               3
             </button>
             <button
-              onClick={() => handleSelectStyle(4)}
-              className={`sel ${styleSelect4} `}
+              onClick={() => handleSelectStyle()}
+              className={buttonColor4}
             >
               4
             </button>
             <button
-              onClick={() => handleSelectStyle(5)}
-              className={`sel ${styleSelect5}`}
+              onClick={() => handleSelectStyle()}
+              className={buttonColor5}
             >
               5
             </button>
-            {/* <button onClick={handleStyle2} className={styleSelect2}>2</button>
-            <button onClick={handleStyle3} className={styleSelect3}>3</button>
-            <button onClick={handleStyle4} className={styleSelect4}>4</button>
-            <button onClick={handleStyle5} className={styleSelect5}>5</button> */}
           </div>
           <button onClick={handleButtonClick} className="btn-submit">
-            Submit
+            {buttonText}
           </button>
         </div>
       </section>

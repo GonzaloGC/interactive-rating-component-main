@@ -40,11 +40,11 @@
   background-color: #262f38;
   border-radius: 25px;
   height: 31px;
-  width: 192px;
+  width: 170px;
 }
 
 .text-messageSelected{
-  font-size: 15px;
+  font-size: 14px;
   color: hsl(25, 97%, 53%);
 }
 
@@ -60,4 +60,39 @@
   font-size: 14px;
   color: hsl(216, 12%, 54%);
   line-height: 20px;
+}
+@media (width >= 768px) {
+  .container-card-thank-you{
+    width: 414px;
+    height: 416px;
+    border-radius: 28px;
+  }
+  .container-info-card{
+    padding: 45px 40px 35px 34px;
+    justify-content: space-between;
+    gap: 0px;
+  }
+  .paragraphThank{
+    font-size: 15px;
+    line-height: 24px;
+    padding-bottom: 12px;
+  }
+  .messageSelected{
+    width: 190px;
+
+  }
+  .text-messageSelected{
+    font-size: 15px;
+    font-weight: 300;
+  }
+  .title-paragr{
+    gap: 10px;
+    padding-bottom: 1px;
+  }
+  .titleThank{
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    /* margin-top: px; */
+  }
 }
