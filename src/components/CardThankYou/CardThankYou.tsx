@@ -13,7 +13,7 @@ export function CardThankYou(props: cardThankYouProps) {
       <div className="container-info-card">
         <img
           className="imgThank"
-          src="src/assets/images/illustration-thank-you.svg"
+          src="/illustration-thank-you.svg"
           alt="image thank you"
         />
         <div className="messageSelected">

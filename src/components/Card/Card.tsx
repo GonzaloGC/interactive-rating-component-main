@@ -73,7 +73,7 @@ export const Card = () => {
           <div className="circle">
             <img
               className="iconStar"
-              src="src/assets/images/icon-star.svg"
+              src="/icon-star.svg"
               alt="icon star"
             />
           </div>
