@@ -87,7 +87,6 @@
   box-shadow: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 } 
-
 .title-card {
   text-align: left;
   font-size: 24px;
@@ -124,11 +123,6 @@
 .btn-submit:focus {
   background-color: hsl(25, 97%, 53%);
   border-radius: 25px;
-  /* width: 278px;
-  height: 45px; */
-  /*letter-spacing: 3px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; */
   outline: none;
   box-shadow: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
