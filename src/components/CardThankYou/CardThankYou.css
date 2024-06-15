@@ -1,4 +1,4 @@
-.container-card-thank-you{
+.container-card-thank-you {
   background-image: linear-gradient(to bottom, #212832, #171e28);
   width: 327px;
   height: 360px;
@@ -8,7 +8,33 @@
   align-items: center;
   box-shadow: 0 0px 50px 0 rgba(0, 0, 0, 0.7);
 }
-.container-info-card{
+.animate-update {
+  /* display: grid;
+  place-content: center; */
+  /* border: 1px solid white; */
+  /* transform-origin: center;
+  width: 45px;
+  height: 45px; */
+  /* border-radius: 50%; */
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #272e38;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  top: 26px;
+  left: 26px;
+  /* align-self: flex-start; */
+}
+.container-images {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+}
+.container-info-card {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -16,19 +42,20 @@
   align-items: center;
   padding: 27px;
   box-sizing: border-box;
+  position: relative;
 }
-.imgThank{
+.imgThank {
   max-width: 50%;
   height: auto;
 }
-.title-paragr{
+.title-paragr {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   color: white;
   gap: 14px;
 }
-.messageSelected{
+.messageSelected {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,17 +64,17 @@
   height: 31px;
   width: 170px;
 }
-.text-messageSelected{
+.text-messageSelected {
   font-size: 14px;
   color: hsl(25, 97%, 53%);
   font-weight: 300;
 }
-.titleThank{
+.titleThank {
   margin: 0;
   text-align: center;
   font-weight: 500;
 }
-.paragraphThank{
+.paragraphThank {
   margin: 0;
   text-align: center;
   font-weight: 400;
@@ -56,34 +83,33 @@
   line-height: 20px;
 }
 @media (width >= 768px) {
-  .container-card-thank-you{
+  .container-card-thank-you {
     width: 414px;
     height: 416px;
     border-radius: 28px;
   }
-  .container-info-card{
+  .container-info-card {
     padding: 45px 40px 35px 34px;
     justify-content: space-between;
     gap: 0px;
   }
-  .paragraphThank{
+  .paragraphThank {
     font-size: 15px;
     line-height: 24px;
     padding-bottom: 12px;
   }
-  .messageSelected{
+  .messageSelected {
     width: 190px;
-
   }
-  .text-messageSelected{
+  .text-messageSelected {
     font-size: 15px;
     font-weight: 300;
   }
-  .title-paragr{
+  .title-paragr {
     gap: 10px;
     padding-bottom: 1px;
   }
-  .titleThank{
+  .titleThank {
     font-size: 28px;
     font-weight: 500;
     letter-spacing: 0.5px;

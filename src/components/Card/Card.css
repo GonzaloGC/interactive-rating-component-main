@@ -108,7 +108,7 @@
   justify-content: space-between;
   box-sizing: border-box;
 }
-.btn-submit {
+.btn-submit:enabled {
   background-color: hsl(25, 97%, 53%);
   border: none;
   text-transform: uppercase;
@@ -119,6 +119,24 @@
   cursor: pointer;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
+.btn-submit:disabled {
+  background-color: hsl(25, 97%, 53%);
+  border: none;
+  text-transform: uppercase;
+  border-radius: 25px;
+  width: 278px;
+  height: 45px;
+  letter-spacing: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  opacity: 0.5;
+}
+/* [aria-disabled="true"] {
+  opacity: 0.5;
+} */
+/* [aria-disabled="false"] {
+  opacity: 1;
+} */
 .btn-submit:active,
 .btn-submit:focus {
   background-color: hsl(25, 97%, 53%);

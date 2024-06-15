@@ -2,6 +2,12 @@ import "./Card.css";
 import { useState } from "react";
 import { CardThankYou } from "../CardThankYou/CardThankYou";
 import classNames from "classnames";
+// import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+// const SelectedNumberContext = createContext(null);
+
+// t
 
 interface ButtonColors {
   [key: number]: string;
@@ -22,6 +28,8 @@ export const Card = () => {
   const [isOptionSelected, setIsOptionSelected] = useState(false);
   const [buttonText, setButtonText] = useState("Submit");
   const [buttonColors, setButtonColors] = useState<ButtonColors>(initialButtonColors);
+  const [isDisabled, setIsDisabled] = useState(true);
+  const navigate = useNavigate();
 
   const handleSelectStyle = (event: React.MouseEvent<HTMLButtonElement>) => {
     const selectedValue = event.currentTarget.textContent;
@@ -41,9 +49,11 @@ export const Card = () => {
 
       setButtonColors(newButtonColors);
     }
+    setIsDisabled(false);
   };
 
   const handleSubmit = () => {
+    navigate("/thank", { state: { renderedNumber: selectedNumber } });
     setRenderedNumber(selectedNumber);
   };
 
@@ -60,7 +70,12 @@ export const Card = () => {
     setButtonText(buttonText || "Submit");
     handleSubmit();
     handleClick();
+    
   };
+
+ 
+
+
 
   const submitCard = classNames("container-card", {
     "container-card-out": change,
@@ -68,7 +83,7 @@ export const Card = () => {
 
   return (
     <>
-      <section className={submitCard}>
+      <section id="card1" className={submitCard}>
         <div className="container-circle-title-p">
           <div className="circle">
             <img
@@ -97,13 +112,14 @@ export const Card = () => {
               </button>
             ))}
           </div>
-          <button onClick={handleButtonClick} className="btn-submit">
-            {buttonText}
-          </button>
+            <button onClick={handleButtonClick} className="btn-submit" aria-disabled="true" disabled={isDisabled}>
+              {buttonText}
+            </button>
         </div>
       </section>
       {renderedNumber !== null && (
-        <CardThankYou selectMessage={renderedNumber} />
+        <CardThankYou />
+        // <CardThankYou selectMessage={renderedNumber} />
       )}
     </>
   );
