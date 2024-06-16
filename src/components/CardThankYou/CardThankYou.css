@@ -44,7 +44,6 @@
 .animate-update::before {
   content: "";
   position: absolute;
-  
   border: 0.1px dashed hsla(25, 97%, 53%, 0.289);
   display: flex;
   justify-content: center;
@@ -133,6 +132,18 @@
   line-height: 20px;
 }
 @media (width >= 768px) {
+  .container-animate-update{
+    top: 32px;
+    left: 33px;
+  }
+  .animate-update {
+    width: 49px;
+    height: 49px;
+  }
+  .animate-update::before {
+    width: 49px;
+    height: 49px;
+  }
   .container-card-thank-you {
     width: 414px;
     height: 416px;
