@@ -25,7 +25,7 @@ export function CardThankYou() {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 1.7 }}
+      transition={{ duration: 1.5 }}
     >
       <section className="container-card-thank-you container-card-thank-you-out">
         <div className="container-info-card">
