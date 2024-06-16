@@ -131,12 +131,6 @@
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   opacity: 0.5;
 }
-/* [aria-disabled="true"] {
-  opacity: 0.5;
-} */
-/* [aria-disabled="false"] {
-  opacity: 1;
-} */
 .btn-submit:active,
 .btn-submit:focus {
   background-color: hsl(25, 97%, 53%);
@@ -193,8 +187,11 @@
   .divTest {
     width: 100%;
   }
-  .btn-submit{
-    width: 335px;
+  .btn-submit:disabled{
+    width: 100%;
+  }
+  .btn-submit:enabled{
+    width: 100%;
   }
   .circle {
     width: 49px;

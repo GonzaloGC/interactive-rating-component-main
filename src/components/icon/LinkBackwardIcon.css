@@ -1,0 +1,24 @@
+.return{
+  fill: #fc7614;
+  animation: ret 15s normal ease-in-out infinite;
+}
+@keyframes ret {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  50% { 
+    opacity: 1;
+  } 
+  75% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.return:hover{
+  fill: #fc7614;
+}
