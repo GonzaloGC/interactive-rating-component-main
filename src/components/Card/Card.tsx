@@ -3,6 +3,8 @@ import { useState } from "react";
 import { CardThankYou } from "../CardThankYou/CardThankYou";
 import classNames from "classnames";
 import { useNavigate } from "react-router-dom";
+import { Tooltip } from "react-tooltip";
+// import { Tooltipss } from "../Tooltipss";
 
 interface ButtonColors {
   [key: number]: string;
@@ -22,7 +24,8 @@ export const Card = () => {
   const [change, setChange] = useState(false);
   const [isOptionSelected, setIsOptionSelected] = useState(false);
   const [buttonText, setButtonText] = useState("Submit");
-  const [buttonColors, setButtonColors] = useState<ButtonColors>(initialButtonColors);
+  const [buttonColors, setButtonColors] =
+    useState<ButtonColors>(initialButtonColors);
   const [isDisabled, setIsDisabled] = useState(true);
   const navigate = useNavigate();
 
@@ -35,11 +38,26 @@ export const Card = () => {
       setIsOptionSelected(true);
 
       const newButtonColors: ButtonColors = {
-        1: number === 1 ? "button-circle-number-selected" : "button-circle-number",
-        2: number === 2 ? "button-circle-number-selected" : "button-circle-number",
-        3: number === 3 ? "button-circle-number-selected" : "button-circle-number",
-        4: number === 4 ? "button-circle-number-selected" : "button-circle-number",
-        5: number === 5 ? "button-circle-number-selected" : "button-circle-number",
+        1:
+          number === 1
+            ? "button-circle-number-selected"
+            : "button-circle-number",
+        2:
+          number === 2
+            ? "button-circle-number-selected"
+            : "button-circle-number",
+        3:
+          number === 3
+            ? "button-circle-number-selected"
+            : "button-circle-number",
+        4:
+          number === 4
+            ? "button-circle-number-selected"
+            : "button-circle-number",
+        5:
+          number === 5
+            ? "button-circle-number-selected"
+            : "button-circle-number",
       };
 
       setButtonColors(newButtonColors);
@@ -65,7 +83,6 @@ export const Card = () => {
     setButtonText(buttonText || "Submit");
     handleSubmit();
     handleClick();
-    
   };
 
   const submitCard = classNames("container-card", {
@@ -77,11 +94,7 @@ export const Card = () => {
       <section id="card1" className={submitCard}>
         <div className="container-circle-title-p">
           <div className="circle">
-            <img
-              className="iconStar"
-              src="/icon-star.svg"
-              alt="icon star"
-            />
+            <img className="iconStar" src="/icon-star.svg" alt="icon star" />
           </div>
           <div className="container-t-p">
             <span className="title-card">How did we do?</span>
@@ -103,9 +116,27 @@ export const Card = () => {
               </button>
             ))}
           </div>
-            <button title={isDisabled ? "Please select an option first.": ""} onClick={handleButtonClick} className="btn-submit" aria-disabled="true" disabled={isDisabled}>
+          <button
+            data-tooltip-id={isDisabled ? "my-tooltip-inline" : ""}
+            data-tooltip-content={
+              isDisabled ? "Please select an option first." : undefined
+            }
+            data-tooltip-place={isDisabled ? "bottom" : undefined}
+            // title={isDisabled ? "Please select an option first." : ""}
+            onClick={handleButtonClick}
+            className="btn-submit"
+            aria-disabled="true"
+            disabled={isDisabled}
+          >
+            {buttonText}
+          </button>
+          <Tooltip
+            id="my-tooltip-inline"
+            style={{ backgroundColor: "hsl(25, 97%, 53%)", color: "#ffffff" }}
+          />
+          {/* <button title={isDisabled ? "Please select an option first.": ""} onClick={handleButtonClick} className="btn-submit" aria-disabled="true" disabled={isDisabled}>
               {buttonText}
-            </button>
+            </button> */}
         </div>
       </section>
       {renderedNumber !== null && (
