@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Card } from "../Card/Card";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { Tooltip } from "react-tooltip";
 
 interface LocationState {
   renderedNumber: number | null;
@@ -33,13 +34,22 @@ export function CardThankYou() {
             onClick={handleClick}
             to="/home"
             className="container-animate-update"
-            title="Return"
+            // title="Return"
           >
-            <div className="animate-update">
+            <div
+              className="animate-update"
+              data-tooltip-id="my-tooltip-inline"
+              data-tooltip-content="Return"
+              data-tooltip-place="bottom"
+            >
               <LinkBackwardIcon />
               {/* <GoSync style={{ transformOrigin: "center" }} /> */}
             </div>
           </Link>
+          <Tooltip
+            id="my-tooltip-inline"
+            // style={{ backgroundColor: "hsl(25, 97%, 53%)", color: "#ffffff" }}
+          />
           <div className="container-images">
             <img
               className="imgThank"

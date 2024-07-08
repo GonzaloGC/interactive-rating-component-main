@@ -4,7 +4,6 @@ import { CardThankYou } from "../CardThankYou/CardThankYou";
 import classNames from "classnames";
 import { useNavigate } from "react-router-dom";
 import { Tooltip } from "react-tooltip";
-// import { Tooltipss } from "../Tooltipss";
 
 interface ButtonColors {
   [key: number]: string;
@@ -132,7 +131,12 @@ export const Card = () => {
           </button>
           <Tooltip
             id="my-tooltip-inline"
-            style={{ backgroundColor: "hsl(25, 97%, 53%)", color: "#ffffff" }}
+            style={{
+              backgroundColor: "hsl(25, 97%, 40%, 0.8)",
+              color: "#ffffff",
+              // borderRadius: "35px",
+              fontSize:"12px"
+            }}
           />
           {/* <button title={isDisabled ? "Please select an option first.": ""} onClick={handleButtonClick} className="btn-submit" aria-disabled="true" disabled={isDisabled}>
               {buttonText}
